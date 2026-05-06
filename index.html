@@ -38,6 +38,31 @@
             border-bottom: 1px solid #cccccc;
         }
 
+        #hero {
+            background-color: #fffaf4;
+        }
+
+        #what {
+            background-color: #fff5e9;
+        }
+
+        #impact {
+            background-color: #fffaf4;
+        }
+
+        #quotes {
+            background-color: #fff5e9;
+        }
+
+        #science {
+            background-color: #fffaf4;
+        }
+
+        #habits {
+            background-color: #fff5e9;
+        }
+
+        /*
         main section,
         main article {
             border-bottom: 1px solid #cccccc;
@@ -61,8 +86,34 @@
             border-bottom: 1px solid #cccccc;
         }
 
+    
         .container {
             max-width: 1100px;
+        }
+*/
+
+        section,
+        article {
+            width: 100%;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        aside {
+            width: 100%;
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .section-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 60px;
+        }
+
+        .nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
 
         .logo {
@@ -85,8 +136,11 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: clamp(3rem, 6vw, 5.5rem);
             font-weight: bold;
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+
         }
 
         .blue-text {
@@ -96,14 +150,23 @@
 
         h2 {
             color: var(--navy);
-            font-size: 1.8rem;
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
             font-weight: bold;
+            line-height: 1.1;
             letter-spacing: -0.01em;
         }
 
         .hero-img {
             border-radius: 20px;
             width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+
+        main p {
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
 
@@ -126,17 +189,19 @@
         }
 
         .impact-list li {
-            padding: 14px 0;
+            padding: 20px 0;
             border-bottom: 1px solid #e8e0d5;
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 16px;
+            font-size: 1.05rem;
+            line-height: 1.6;
         }
 
         .impact-emoji {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             flex-shrink: 0;
-            margin-top: 1px;
+            margin-top: 2px;
         }
 
         .impact-list li:last-child {
@@ -215,6 +280,17 @@
             box-shadow: 0 6px 20px rgba(108, 99, 255, 0.35);
         }
 
+        .research-link {
+            color: var(--purple);
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .research-link:hover {
+            color: var(--purple-dark);
+        }
+
 
         @media (max-width: 768px) {
             h1 {
@@ -231,152 +307,187 @@
 
 <body>
 
-    <header class="container py-3">
-        <nav class="d-flex flex-wrap justify-content-between align-items-center">
-            <img src="img/brain.jpg" alt="Website logo with brain and digital theme" class="logo">
+    <header class="py-3">
+        <div class="nav-inner">
+            <nav class="d-flex flex-wrap justify-content-between align-items-center">
+                <img src="img/brain.jpg" alt="Website logo with brain and digital theme" class="logo">
 
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#impact">Insights</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Get Involved</a></li>
-            </ul>
-        </nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="home" class="container py-5">
+    <main id="home">
 
-        <section class="row align-items-center">
-            <div class="col-md-6">
-                <h1>Logged In,<br><span class="blue-text">Burned Out</span></h1>
-                <p>By Joshua Ruiz and Christian Perez</p>
-                <a href="#solutions" class="btn btn-primary">Take Control</a>
-            </div>
-
-            <div class="col-md-6 mt-4 mt-md-0">
-                <img src="img/DisconnectImage.jpg" alt="Student stressed while using laptop and phone" class="hero-img">
-            </div>
-        </section>
-
-        <article class="row align-items-center">
-            <div class="col-md-6">
-                <h2>What is Digital Overload?</h2>
-                <p>
-                    Digital overload is the constant exposure to screens, notifications, and online content that
-                    overwhelms your brain. For college students, it often comes from balancing academic work
-                    with heavy use of apps like TikTok, Instagram, Snapchat, and X.
-                </p>
-                <p>
-                    This nonstop input makes it harder to focus, shortens attention span, and disrupts sleep, especially
-                    for Gen Z students who are always connected. Over time, it can lead to burnout,
-                    mental fatigue, and decreased productivity.
-                </p>
-            </div>
-
-            <div class="col-md-6">
-                <img src="img/TooMuchScreenTime.jpg" alt="Student looking tired while using computer" class="hero-img">
-            </div>
-        </article>
-
-        <article id="impact" class="row align-items-center mb-5">
-            <div class="col-md-6">
-                <h2>Why It Matters for Students</h2>
-                <p>
-                    Digital overload directly impacts how students learn, think, and function day-to-day. Constant
-                    screen use makes it harder to stay focused during lectures, complete assignments efficiently, and
-                    retain information.
-                </p>
-                <img src="img/CircularImageDigitalOverload.jpg" alt="Student studying with laptop and books"
-                    class="section-img mt-4">
-            </div>
-
-            <div class="col-md-6">
-                <ul class="impact-list">
-                    <li>
-                        <span class="impact-emoji">🧠</span>
-                        <div><strong>Focus &amp; Attention:</strong> Shorter attention spans, more distractions
-                        </div>
-                    </li>
-                    <li>
-                        <span class="impact-emoji">😴</span>
-                        <div><strong>Sleep:</strong> Late-night scrolling leads to poor rest
-                        </div>
-                    </li>
-                    <li>
-                        <span class="impact-emoji">📚</span>
-                        <div><strong>Academic Performance:</strong> Lower productivity and motivation
-                        </div>
-                    </li>
-                    <li>
-                        <span class="impact-emoji">💭</span>
-                        <div><strong>Mental Health:</strong> Increased stress, burnout, and fatigue
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </article>
-
-        <section>
-            <h2 class="text-center mb-4">Real Student Experiences</h2>
-
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="blue-card">
-                        <p>
-                            “Being constantly surrounded by technology makes it harder and harder to deny myself the
-                            distraction. Nowadays, completing assignments requires using this technology. Even for the
-                            most self-disciplined, digital distractions can turn a twenty-minute assignment into a
-                            multiple-hour endeavor.”
-                        </p>
-                        <p><strong>- Cal State LA Student</strong></p>
+        <section id="hero" class="row align-items-center">
+            <div class="section-inner">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h1>Logged In,<br><span class="blue-text">Burned Out</span></h1>
+                        <p>By Joshua Ruiz and Christian Perez</p>
+                        <a href="#solutions" class="btn btn-primary">Take Control</a>
                     </div>
-                </div>
 
-                <div class="col-md-4 mb-3">
-                    <div class="blue-card">
-                        <p>
-                            “I believe digital overload has affected me and the majority of my peers in a negative
-                            manner, as it has become a necessity. I relied on technology for my academics and free time,
-                            leading to my inability to go without it. During my time at CSULA, technology caused
-                            distractions and a limited amount of interaction between students.”
-                        </p>
-                        <p><strong>- Cal State LA Student</strong></p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <div class="blue-card">
-                        <p>
-                            “Digital overload makes it hard for me to be present in the moment. I find myself constantly
-                            checking my phone, even when I know I should be focusing on my studies or spending time with
-                            friends and family. It's exhausting trying to keep up with everything online, and it leaves
-                            me feeling more stressed and less productive.”
-                        </p>
-                        <p><strong>- Cal State LA Student</strong></p>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <img src="img/DisconnectImage.jpg" alt="Student stressed while using laptop and phone"
+                            class="hero-img">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>The Science Behind Digital Overload</h2>
-            <p>
-                Constant screen use changes how your brain handles attention and rewards. Frequent notifications and
-                scrolling trigger dopamine, training your brain to expect quick stimulation. This makes it harder to
-                focus on longer tasks like studying or lectures.
-            </p>
+        <article id="what">
+            <div class="section-inner">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h2>What is Digital Overload?</h2>
+                        <p>
+                            Digital overload is the constant exposure to screens, notifications, and online content that
+                            overwhelms your brain. For college students, it often comes from balancing academic work
+                            with heavy use of apps like TikTok, Instagram, Snapchat, and X.
+                        </p>
+                        <p>
+                            This nonstop input makes it harder to focus, shortens attention span, and disrupts sleep,
+                            especially
+                            for Gen Z students who are always connected. Over time, it can lead to burnout,
+                            mental fatigue, and decreased productivity.
+                        </p>
+                    </div>
 
-            <p>
-                It also affects sleep. Blue light from screens reduces melatonin, making it harder to fall asleep
-                and stay rested.
-            </p>
+                    <div class="col-md-6">
+                        <img src="img/TooMuchScreenTime.jpg" alt="Student looking tired while using computer"
+                            class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </article>
 
-            <img src="img/3StepSolution.jpg"
-                alt="Three steps of digital overload: stimulation, harder to focus, affects sleep"
-                style="width:100%; border-radius:20px; display:block; margin-top:24px;">
+        <article id="impact">
+            <div class="section-inner">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h2>Why It Matters for Students</h2>
+                        <p>
+                            Digital overload directly impacts how students learn, think, and function day-to-day.
+                            Constant
+                            screen use makes it harder to stay focused during lectures, complete assignments
+                            efficiently, and
+                            retain information.
+                        </p>
+                        <img src="img/CircularImageDigitalOverload.jpg" alt="Student studying with laptop and books"
+                            class="section-img mt-4">
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="impact-list">
+                            <li>
+                                <span class="impact-emoji">🧠</span>
+                                <div><strong>Focus &amp; Attention:</strong> Shorter attention spans, more distractions
+                                </div>
+                            </li>
+                            <li>
+                                <span class="impact-emoji">😴</span>
+                                <div><strong>Sleep:</strong> Late-night scrolling leads to poor rest
+                                </div>
+                            </li>
+                            <li>
+                                <span class="impact-emoji">📚</span>
+                                <div><strong>Academic Performance:</strong> Lower productivity and motivation
+                                </div>
+                            </li>
+                            <li>
+                                <span class="impact-emoji">💭</span>
+                                <div><strong>Mental Health:</strong> Increased stress, burnout, and fatigue
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section id="quotes">
+            <div class="section-inner">
+                <h2 class="text-center mb-4">Real Student Experiences</h2>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="blue-card">
+                            <p>
+                                “Being constantly surrounded by technology makes it harder and harder to deny myself the
+                                distraction. Nowadays, completing assignments requires using this technology. Even for
+                                the
+                                most self-disciplined, digital distractions can turn a twenty-minute assignment into a
+                                multiple-hour endeavor.”
+                            </p>
+                            <p><strong>- Cal State LA Student</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="blue-card">
+                            <p>
+                                “I believe digital overload has affected me and the majority of my peers in a negative
+                                manner, as it has become a necessity. I relied on technology for my academics and free
+                                time,
+                                leading to my inability to go without it. During my time at CSULA, technology caused
+                                distractions and a limited amount of interaction between students.”
+                            </p>
+                            <p><strong>- Cal State LA Student</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="blue-card">
+                            <p>
+                                “Digital overload makes it hard for me to be present in the moment. I find myself
+                                constantly
+                                checking my phone, even when I know I should be focusing on my studies or spending time
+                                with
+                                friends and family. It's exhausting trying to keep up with everything online, and it
+                                leaves
+                                me feeling more stressed and less productive.”
+                            </p>
+                            <p><strong>- Cal State LA Student</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="science">
+            <div class="section-inner">
+                <h2>The Science Behind Digital Overload</h2>
+                <p>
+                    Constant screen use changes how your brain handles attention and rewards. Frequent notifications and
+                    scrolling trigger dopamine, training your brain to expect quick stimulation. This makes it harder to
+                    focus on longer tasks like studying or lectures.
+                </p>
+
+                <p>
+                    It also affects sleep. Blue light from screens reduces melatonin, making it harder to fall asleep
+                    and stay rested, especially when students use phones close to bedtime. For more on the research
+                    behind digital overload and sleep, see
+                    <a class="research-link"
+                        href="https://www.goodrx.com/health-topic/mental-health/what-is-digital-overload"
+                        target="_blank">GoodRx</a>
+                    and the
+                    <a class="research-link" href="https://doi.org/10.1007/s11920-025-01658-w" target="_blank">Özbay
+                        study</a>.
+                </p>
+
+                <img src="img/3StepSolution.jpg"
+                    alt="Three steps of digital overload: stimulation, harder to focus, affects sleep"
+                    style="width:100%; border-radius:20px; display:block; margin-top:24px;">
+            </div>
     </main>
 
-    <aside id="solutions" class="container py-5">
-        <section>
+    <aside id="habits">
+        <div class="section-inner">
             <h2>Solutions and Healthy Habits</h2>
 
             <div class="row text-center g-2">
@@ -417,17 +528,20 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </aside>
-
-    <footer id="contact" class="container">
-        <div class="d-flex justify-content-center gap-2 flex-wrap">
-            <a href="#home" class="btn btn-primary btn-sm">Home</a>
-            <a href="#impact" class="btn btn-primary btn-sm">Insights</a>
-            <a href="mailto:example@email.com" class="btn btn-primary btn-sm">Get Involved</a>
         </div>
 
-        <p class="mt-3">&copy; 2025 Logged In, Burned Out</p>
+    </aside>
+
+    <footer id="contact">
+        <div class="section-inner" style="padding: 40px 60px;">
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <a href="#home" class="btn btn-primary btn-sm">Home</a>
+                <a href="#impact" class="btn btn-primary btn-sm">Insights</a>
+                <a href="mailto:example@email.com" class="btn btn-primary btn-sm">Get Involved</a>
+            </div>
+
+            <p class="mt-3">&copy; 2025 Logged In, Burned Out</p>
+        </div>
     </footer>
 
 </body>
